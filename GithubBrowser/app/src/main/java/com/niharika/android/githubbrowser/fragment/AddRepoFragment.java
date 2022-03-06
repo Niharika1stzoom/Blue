@@ -1,6 +1,7 @@
 package com.niharika.android.githubbrowser.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,26 +45,31 @@ public class AddRepoFragment extends Fragment {
         mBinding = AddRepoFragmentBinding.inflate(inflater, container, false);
         View view = mBinding.getRoot();
         addClickListener();
+        addObserver();
         return view;
+    }
+
+    private void addObserver() {
+        mRepo.observe(getViewLifecycleOwner(), repo -> {
+            if (repo != null)
+                NavHostFragment.findNavController(this).navigate(R.id.landingRepoFragment);
+            else {
+                if (!RepoUtility.isNetworkAvailableAndConnected(getContext()))
+                    RepoUtility.showSnackbar(getView(), getString(R.string.network_err));
+                else {
+                    RepoUtility.showSnackbar(getView(), getString(R.string.repo_not_found));
+                }
+            }
+        });
     }
 
     private void addClickListener() {
         mBinding.addButton.setOnClickListener(view -> {
-            String repoName = mBinding.repoNameValue.getText().toString();
-            String owner = mBinding.ownerValue.getText().toString();
+            String repoName = mBinding.repoNameValue.getText().toString().trim();
+            String owner = mBinding.ownerValue.getText().toString().trim();
             if (!validateInput(repoName, owner))
                 return;
             mViewModel.addRepo(repoName, owner, mRepo);
-            mRepo.observe(getViewLifecycleOwner(), repo -> {
-                if (repo != null)
-                    NavHostFragment.findNavController(this).navigate(R.id.landingRepoFragment);
-                else {
-                    if (!RepoUtility.isNetworkAvailableAndConnected(getContext()))
-                        RepoUtility.showSnackbar(view, getString(R.string.network_err));
-                    else
-                        RepoUtility.showSnackbar(getView(), getString(R.string.repo_not_found));
-                }
-            });
         });
     }
 

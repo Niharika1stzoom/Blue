@@ -11,7 +11,7 @@
     <string name="text">""</string>
     <string name="date_label">10 Mar 21</string>
     <string name="string_commit_text">a30efa</string>
-    <string name="commit_msg">Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Commit Comm</string>
+    <string name="commit_msg">""</string>
     <string name="detail_fragment_title">Details</string>
     <string name="commmit_fragmet_title">Commits</string>
     <string name="del_label">Delete Repo</string>
@@ -24,6 +24,6 @@
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="recycler_view_msg">There is no data to show.</string>
-    <string name="network_err">Please chect your network connection</string>
+    <string name="network_err">Please check your network connection.</string>
     <string name="share">Share</string>
 </resources>
