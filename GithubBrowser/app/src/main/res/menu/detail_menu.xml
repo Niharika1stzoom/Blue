@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/repo_del"
+        android:icon="@drawable/ic_action_del"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/del_label" />
+    <item
+        android:id="@+id/view_repo"
+        android:icon="@drawable/ic_action_view"
+        app:showAsAction="ifRoom|withText"
+        android:title="@string/view_repo" />
 
 </menu>

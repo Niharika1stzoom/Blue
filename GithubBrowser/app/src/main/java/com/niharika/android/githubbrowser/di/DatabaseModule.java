@@ -1,14 +1,10 @@
-package com.niharika.android.roomwordssample.di;
+package com.niharika.android.githubbrowser.di;
 
 import android.content.Context;
 
-
-import com.niharika.android.roomwordssample.WordDao;
-import com.niharika.android.roomwordssample.WordRoomDatabase;
-
-import javax.inject.Inject;
+import com.niharika.android.githubbrowser.room.RepoDao;
+import com.niharika.android.githubbrowser.room.RepoRoomDatabase;
 import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import dagger.hilt.InstallIn;
@@ -18,18 +14,14 @@ import dagger.hilt.components.SingletonComponent;
 @Module
 @InstallIn(SingletonComponent.class)
 public class DatabaseModule {
-
-
     @Provides
-    WordDao provideWordDao(WordRoomDatabase database) {
-        return database.wordDao();
+    RepoDao provideRepoDao(RepoRoomDatabase database) {
+        return database.repoDao();
     }
-
-
     @Singleton
     @Provides
-    WordRoomDatabase provideDatabase(@ApplicationContext Context context) {
-        return WordRoomDatabase.getDatabase(context);
+    RepoRoomDatabase provideDatabase(@ApplicationContext Context context) {
+        return RepoRoomDatabase.getDatabase(context);
 
     }
 }

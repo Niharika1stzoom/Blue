@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto"
-             android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/landingRepoFragment">
 
+    <fragment
+        android:id="@+id/landingRepoFragment"
+        android:name="com.niharika.android.githubbrowser.fragment.LandingRepoFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/landing_repo_fragment" />
+    <fragment
+        android:id="@+id/addRepoFragment"
+        android:name="com.niharika.android.githubbrowser.fragment.AddRepoFragment"
+        android:label="@string/add_repo_title"
+        tools:layout="@layout/add_repo_fragment" />
+    <fragment
+        android:id="@+id/repoDetailFragment"
+        android:name="com.niharika.android.githubbrowser.fragment.RepoDetailFragment"
+        android:label="@string/detail_fragment_title"
+        tools:layout="@layout/repo_detail_fragment" />
+    <fragment
+        android:id="@+id/branchCommitFragment"
+        android:name="com.niharika.android.githubbrowser.fragment.BranchCommitFragment"
+        android:label="@string/commmit_fragmet_title"
+        tools:layout="@layout/branch_commit_fragment" />
+    <fragment
+        android:id="@+id/branchListFragment"
+        android:name="com.niharika.android.githubbrowser.fragment.BranchListFragment"
+        android:label="branch_list_fragment"
+        tools:layout="@layout/branch_list_fragment" />
+    <fragment
+        android:id="@+id/issueListFragment"
+        android:name="com.niharika.android.githubbrowser.fragment.IssueListFragment"
+        android:label="issue_list_fragment"
+        tools:layout="@layout/issue_list_fragment" />
 </navigation>

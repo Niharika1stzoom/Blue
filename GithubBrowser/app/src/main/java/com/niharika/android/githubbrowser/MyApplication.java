@@ -1,3 +1,9 @@
 package com.niharika.android.githubbrowser;
-   class MyApplication extends Application   {
+
+import android.app.Application;
+
+import dagger.hilt.android.HiltAndroidApp;
+
+@HiltAndroidApp
+public class MyApplication  extends Application {
 }

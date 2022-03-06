@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/drawable-anydpi/ic_action_del.xml" value="0.1" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/drawable-anydpi/ic_action_share.xml" value="0.19270833333333334" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/drawable-v24/splash.xml" value="0.1078125" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/drawable/edit_text_bkg.xml" value="0.14479166666666668" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/drawable/recycler_bkg.xml" value="0.19270833333333334" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/layout/add_repo_fragment.xml" value="0.1" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/layout/branch_commit_fragment.xml" value="0.10597826086956522" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/layout/branch_list_fragment.xml" value="0.18" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/layout/issue_list_fragment.xml" value="0.10597826086956522" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/layout/landing_repo_fragment.xml" value="0.25" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/layout/list_item_commit.xml" value="0.33" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/layout/list_item_issue.xml" value="0.1" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/layout/list_item_repo.xml" value="0.1" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/layout/repo_detail_fragment.xml" value="0.1" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/menu/detail_menu.xml" value="0.1765625" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/menu/landing_repo_menu.xml" value="0.2" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/mipmap-anydpi-v26/ic_action_share_round.xml" value="0.1" />
+        <entry key="..\:/niharika/android/GithubBrowser/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

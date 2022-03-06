@@ -1,17 +1,16 @@
-package com.niharika.android.githubbrowser;
+package com.niharika.android.githubbrowser.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
-
-
 import com.niharika.android.githubbrowser.Model.Branch;
+import com.niharika.android.githubbrowser.Model.Repo;
+import com.niharika.android.githubbrowser.R;
 import com.niharika.android.githubbrowser.utilities.RepoUtility;
 
 import java.util.List;
@@ -19,6 +18,7 @@ import java.util.List;
 public class BranchAdapter extends RecyclerView.Adapter<BranchAdapter.BranchViewHolder> {
     Context mContext;
     private List<Branch> mBranchList;
+    Repo mRepo;
     public BranchAdapter(Context context) {
         mContext = context;
     }
@@ -43,8 +43,9 @@ public class BranchAdapter extends RecyclerView.Adapter<BranchAdapter.BranchView
         }
         return mBranchList.size();
     }
-    public void setList(List<Branch> BranchList) {
+    public void setList(List<Branch> BranchList,Repo repo) {
         mBranchList = BranchList;
+        mRepo=repo;
         notifyDataSetChanged();
     }
 
@@ -65,7 +66,7 @@ public class BranchAdapter extends RecyclerView.Adapter<BranchAdapter.BranchView
         public void onClick(View view) {
             Branch branch=mBranchList.get(getAdapterPosition());
             Navigation.findNavController(view).navigate(
-                    R.id.branchCommitFragment, RepoUtility.getBranchBundle(branch));
+                    R.id.branchCommitFragment, RepoUtility.getBranchBundle(branch,mRepo));
         }
     }
 }
