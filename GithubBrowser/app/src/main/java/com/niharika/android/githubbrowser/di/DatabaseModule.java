@@ -1,7 +1,6 @@
 package com.niharika.android.githubbrowser.di;
 
 import android.content.Context;
-
 import com.niharika.android.githubbrowser.room.RepoDao;
 import com.niharika.android.githubbrowser.room.RepoRoomDatabase;
 import javax.inject.Singleton;
@@ -18,10 +17,11 @@ public class DatabaseModule {
     RepoDao provideRepoDao(RepoRoomDatabase database) {
         return database.repoDao();
     }
+
     @Singleton
     @Provides
     RepoRoomDatabase provideDatabase(@ApplicationContext Context context) {
         return RepoRoomDatabase.getDatabase(context);
-
     }
 }
+

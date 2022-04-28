@@ -16,9 +16,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel;
 public class AddRepoViewModel extends ViewModel {
     MutableLiveData<Repo> liveData;
     @Inject
-    RepoDao mRepoDao;
-    @Inject
-    GithubApiInterface mApiInterface;
+    RepoRepository mRepoRepository;
     @Inject
     public AddRepoViewModel() { liveData = new MutableLiveData(); }
 
@@ -27,7 +25,6 @@ public class AddRepoViewModel extends ViewModel {
     }
 
     public void addRepo(String repoName, String owner, MutableLiveData<Repo> repo) {
-        RepoRepository repoRepository = new RepoRepository(mRepoDao,mApiInterface);
-        repoRepository.addRepo(repoName,owner,repo);
+        mRepoRepository.addRepo(repoName,owner,repo);
     }
 }

@@ -14,11 +14,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel;
 
 @HiltViewModel
 public class BranchListViewModel extends ViewModel {
-    @Inject
-    RepoDao mRepoDao;
     private MutableLiveData<List<Branch>> mBranchList;
     @Inject
-    GithubApiInterface mApiInterface;
+    RepoRepository mRepoRepository;
 
     @Inject
     public BranchListViewModel() {
@@ -26,8 +24,7 @@ public class BranchListViewModel extends ViewModel {
     }
 
     public LiveData<List<Branch>> getBranchList(Repo repo) {
-        RepoRepository repoRepository = new RepoRepository(mRepoDao,mApiInterface);
-        repoRepository.getBranchList(repo,mBranchList);
+        mRepoRepository.getBranchList(repo,mBranchList);
         return mBranchList;
     }
 }

@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.D3Signage" parent="@style/Theme.Leanback" />
+</resources>

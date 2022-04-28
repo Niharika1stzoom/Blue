@@ -14,20 +14,16 @@ import dagger.hilt.android.lifecycle.HiltViewModel;
 
 @HiltViewModel
 public class IssueListViewModel extends ViewModel {
-    @Inject
-    RepoDao mRepoDao;
     private MutableLiveData<List<Issue>> mIssueList;
     @Inject
-    GithubApiInterface mApiInterface;
-
+    RepoRepository mRepoRepository;
     @Inject
     public IssueListViewModel() {
         mIssueList = new MutableLiveData();
     }
 
     public LiveData<List<Issue>> getOpenIssuesList(Repo repo) {
-        RepoRepository repoRepository = new RepoRepository(mRepoDao,mApiInterface);
-        repoRepository.getOpenIssueList(repo,mIssueList);
+        mRepoRepository.getOpenIssueList(repo,mIssueList);
         return mIssueList;
     }
 }

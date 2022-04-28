@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 import com.niharika.android.githubbrowser.R;
+import com.niharika.android.githubbrowser.databinding.ListItemRepoBinding;
 import com.niharika.android.githubbrowser.room.BaseRepo;
 import com.niharika.android.githubbrowser.utilities.RepoUtility;
 
@@ -18,6 +19,7 @@ import java.util.List;
 
 
 public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepoViewHolder> {
+    ListItemRepoBinding mBinding;
     Context mContext;
     private List<BaseRepo> mRepoList;
     public RepoAdapter(Context context) {
